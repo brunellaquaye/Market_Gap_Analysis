@@ -12,7 +12,9 @@ st.set_page_config(
 #  DATA LOADING 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("food_facts_snacks.csv")
+    file_id = "1QoUOlrm1dLATFqdJ17Xk8mUdiQxJryMy"
+    url = f"https://drive.google.com/uc?export=download&id={file_id}"
+    df = pd.read_csv(url)      
     p99_sugar = df['sugars_100g'].quantile(0.99)
     p99_protein = df['proteins_100g'].quantile(0.99)
     df_plot = df[(df['sugars_100g'] <= p99_sugar) & (df['proteins_100g'] <= p99_protein)]
