@@ -1,0 +1,9 @@
+food_facts.csv.gz\
+.csv
+food_facts_snacks.csv
+food_facts_clean.csv
+__pycache__/
+*.pyc
+.env
+.csv
+
